@@ -1,0 +1,573 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.wrapper {
+  max-width: 1800px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.page {
+   width: 100%;
+   
+   position: relative;
+   overflow: hidden;
+   background: #000 url('../IMG/bg.jpg');
+   color: white;
+}
+
+.container{
+   margin-top: 200px;
+}
+
+/* Шапка сайта */
+
+.logo{
+   width: 50px ;
+   height: 50px;
+}
+
+.site-header {
+   width: 100%;
+   margin-bottom: 100px;
+   position: fixed;
+   z-index: 2;
+   background-color: #2B7DED;  
+}
+
+.site-header__wrapper {
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+.nav__wrapper{
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+.header-tel {
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+
+.nav__item a {
+   display: block;
+   padding: 1.5rem 1rem;
+}
+
+.nav__toggle {
+   display: none;
+}
+
+/* Основной контент  Слайдер*/
+
+/* Собственно сам слайдер */
+.slider{
+   max-width: 100%;
+   position: relative;
+   
+   height: 500px;
+   margin-bottom: 130px;
+   margin: auto;
+   
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+   object-fit: cover;
+   width: 400px;
+   height: 400px;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+   cursor: pointer;
+   position: absolute;
+   top: 0;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+}
+
+
+.slider .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+}
+
+
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Заголовок слайда */
+.slideText {
+   position: absolute;
+   color: #fff;
+   font-size: 35px;
+   /* Выравнивание текста по горизонтали и по вертикали*/
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   /* Тень*/
+   text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+
+/* Кружочки */
+
+.slider-dots {
+ text-align: center;
+ margin-bottom: 100px;
+}
+.slider-dots_item{
+   cursor: pointer;
+   height: 12px;
+   width: 12px;
+   margin: 0 2px;
+   background-color: #ddd;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+   background-color: #aaa;
+}
+
+
+/* Анимация слайдов */
+
+.slider .item {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+   from {
+       opacity: .4
+   }
+   to {
+       opacity: 1
+   }
+}
+
+@keyframes fade {
+   from {
+       opacity: .4
+   }
+   to {
+       opacity: 1
+   }
+}
+
+.information{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+}
+
+.information_item img {
+   border-radius: 5px;
+}
+
+.information_item h2 {
+   font-size: 1.5rem;
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 10px;
+}
+.information_item p {
+   font-size: 1.5rem;
+   font-weight: 400;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+
+
+/*Форма отправки*/
+.form {
+   width: 100%;
+   padding: 15px;
+   max-width: 280px;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+}
+
+.form_two {
+   /* position: absolute;
+   left: 42.5%;*/
+   display: none; 
+   margin: 20px auto;
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+.input {
+   display: block;
+   width: 100%;
+   padding: 12px 18px;
+   margin-top: 8px;
+
+   font-family: inherit;
+   font-size: 1rem;
+   color: #FFF;
+   border: 0;
+   border-radius: 5px;
+
+   background-color: rgba(255, 255, 255, .1);
+}
+
+.input::placeholder, 
+.textarea::placeholder {
+   color: #FFF;
+}
+
+.check_box{
+   margin-bottom: 10px;
+}
+
+.btn {
+   display: inline-block;
+   padding:12px 35px;
+   font-size: 1rem;
+   font-family: inherit;
+   line-height: 1.1;
+   color: #FFF;
+   font-weight:500;
+   text-decoration: none;
+   cursor: pointer;
+
+   border: 0;
+   background-color: #2B7DED;
+   border-radius: 5px;
+   transition: background .2s linear ;
+}
+
+.btn:hover {
+   background-color: #083d87;
+}
+
+.btn-full {
+   display: block;
+   width: 100%;
+}
+
+.btn_two {
+
+   padding:12px 35px;
+   font-size: 1rem;
+   font-family: inherit;
+   line-height: 1.1;
+   color: #FFF;
+   font-weight:500;
+   text-decoration: none;
+   cursor: pointer;
+
+   border: 0;
+   background-color: #2B7DED;
+   border-radius: 5px;
+   transition: background .2s linear ;
+   
+   position: absolute;
+   left: 46%;
+   top: 200px
+   
+}
+
+.btn_two:hover {
+   background-color: #083d87;
+}
+
+.active_1 {
+   display: block;
+}
+
+.form_up{
+ display: none;
+}
+
+
+/* Основной контент  Приемущества*/
+
+hr {
+   display: block;
+   width: 90%;
+   unicode-bidi: isolate;
+   -webkit-margin-before: 0.5em;
+   -webkit-margin-after: 0.5em;
+   -webkit-margin-start: auto;
+   -webkit-margin-end: auto;
+   overflow: hidden;
+   border-style: inset;
+   border-width: 2px;
+}
+
+.advantages-h2 {
+   margin: 50px auto;
+   text-align: center;
+   font-size: 2rem;
+}
+
+.advantages{
+   width: 100%;
+   display: grid;
+   gap: 50px;
+   grid-template-columns: 500px 500px;
+   grid-template-rows: 200px 200px;
+   justify-content: center;
+
+}
+
+[class^="box-"] {
+   /* Размещаем контейнеры по центру */
+   display: grid;
+   place-items: flex-start;
+}
+
+.box-1 img {
+   width: 64px;
+   height: 64px;
+}
+
+.box-1 {
+   font-size: 1.2rem;
+   display: flex;
+   justify-self: start;
+   text-align: start;
+}
+.box-1 h3 {
+   font-size: 1.8rem;
+   font-weight: 700;
+   margin-bottom: 7px;
+}
+.box-1-content {
+   margin-left: 15px;
+}
+
+.btn-advantages{
+   margin: 40px 46.5%;
+}
+
+.gain-center{
+ transition: 1s; /* Время эффекта */
+}
+.gain-center:hover {
+   transform-origin: left;
+   transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+
+/* Основной контент  Контакты*/
+
+.contact-content {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+
+
+.contakts {
+   width: 300px;
+   height: 500px;
+
+   margin-bottom: 100px;
+   font-size: 1.5rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.contacts-messages div {
+   margin: 20px;
+   text-align: center;
+}
+.messages{
+   text-align: center;
+}
+
+.whatsapp{
+ margin-top: 30px;
+}
+.whatsapp{
+   margin-left: 20px;
+}
+
+.social-one{
+   margin-left: 50px;
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+.social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 24px;
+    margin: 0 30px 10px 0;
+    padding: 6px;
+    color: #000;
+    
+}
+.telegram a:hover {background: #249bd7; color: #fff;}
+.whatsapp a:hover {background: #50b154; color: #fff;}
+
+
+
+
+
+/*Media*/
+@media (max-width: 1100px){
+   .advantages{
+      gap: 50px;
+      grid-template-columns: 500px;
+      grid-template-rows: 100px ;
+      justify-content: center;
+   
+   }
+
+}
+
+
+
+@media (max-width: 715px){
+   .header-tel{
+      display: none;
+   }
+   .form_vvod {
+      display: none;
+   }
+   .btn-advantages{
+      margin: 40px 40.5%;
+   }
+   .carta {
+      display: none;
+   }
+}
+
+@media (min-width: 600px) {
+   .site-header__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+}
+
+@media (min-width: 600px) {
+   .nav__wrapper {
+      display: flex;
+   }
+}
+
+@media (max-width: 599px) {
+   .nav__wrapper {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #2B7DED;  /*#d9f0f7;*/
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+   }
+
+   .nav__wrapper.actives {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+
+@media (max-width: 599px) {
+   .nav__toggle {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+
+      width: 55px;
+      height: 25px;
+   }
+
+   .btn_two {
+      position: absolute;
+      left: 40%;
+      top: 200px
+   }
+}
+
+@media (max-width: 550px) {
+   .box-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+   }
+}
+@media (max-width: 500px) {
+   .advantages{
+      grid-template-columns: 350px;
+      grid-template-rows: 120px ;
+      justify-content: center;
+   }      
+   
+}
+
+
+@media (max-width: 450px) {
+   .btn_two {
+      position: absolute;
+      left: 36%;
+      top: 200px
+   }
+
+   .btn-advantages{
+      margin: 40px 35.5%;
+   }
+}

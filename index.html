@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Electric scooters</title>
+   <link rel="stylesheet" href="CSS/reset.css">
+   <link rel="stylesheet" href="CSS/index.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <div class="page">
+      <div class="page_1" id="home"></div>
+      <!--Шапка сайтаr-->
+      <header class="site-header">
+         <div class="wrapper site-header__wrapper">
+            <img src="IMG/logo.png" alt="Электро-самокат" class="logo">
+            <span class="header-tel">
+               <a href="tel:+79998887766">+7 (978) 051-10-50</a>
+            </span>
+            <nav class="nav">
+               <img src="IMG/menu.svg" alt="Меню" class="nav__toggle" aria-expanded="false">
+               <ul class="nav__wrapper">
+                  <li class="nav__item"><a href="#home">Главная</a></li>
+                  <li class="nav__item"><a href="#Advantages">Приемущества</a></li>
+                  <li class="nav__item"><a href="#contact">Контакты</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <!--Основной контент-->
+      <div class="container">
+         <main class="main">
+            <div class="slider" >
+               <div class="item">
+                  <div class="information">
+                     <div class="information_item">
+                        <h2>Купить электрсоамокат</h2>
+                        <p>Самые выгодные цены у нас</p>
+                        <img src="IMG/samocat.jpg" alt="электросамокат" class="information_item_samocat">
+                     </div>
+                     <div class="form_vvod">
+
+                        <form class="form" id="form" action="/apply/" method="POST">
+                           <div class="form-group">
+                              <label for="" class="label_form">Имя</label>
+                              <input class="input" id="name" type="text" name="name" placeholder="Имя">
+                           </div>
+                           <div class="form-group">
+                              <label for="" class="label_form">Телефон</label>
+                              <input class="input" id="tel" type="tel" name="tel" placeholder="Телефон">
+                           </div>
+                           <div class="check_box">
+                              <input type="checkbox" id="click" required>
+                              <label for="click">Принимаю условия</label>
+                           </div>
+                           <div class="form-group">
+                              <button class="btn btn-full" type="submit">Отправить</button>
+                           </div>
+                        </form>
+
+                     </div>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <div class="information_two" id="information_two">
+                     <div class="information_item">
+                        <h2>Купить электрсоамокат</h2>
+                        <p>С доставкой по Севастополю</p>
+                     </div>
+                     <div class="btn_popup">
+                        <button class="btn_two">Заказать</button>
+                     </div>
+                  
+                     <form class="form form_two" action="/" method="post">
+                        <div class="form-group">
+                           <label for="" class="label_form">Имя</label>
+                           <input class="input" type="text" name="name" placeholder="Имя">
+                        </div>
+                        <div class="form-group">
+                           <label for="" class="label_form">Телефон</label>
+                           <input class="input" type="tel" name="tel" placeholder="Телефон">
+                        </div>
+                        <div class="check_box">
+                           <input type="checkbox" id="click" required>
+                           <label for="click">Принимаю условия</label>
+                        </div>
+
+                        <div class="form-group">
+                           <button class="btn btn-full" type="submit">Отправить</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+               <a class="prev" onclick="minusSlide()">&#10094;</a>
+               <a class="next" onclick="plusSlide()">&#10095;</a>
+            </div>
+            <div class="slider-dots"  id="Advantages">
+               <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+               <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+            </div>
+
+            <hr>
+
+            <h2 class="advantages-h2">Преимущества</h2>
+            <div class="advantages">
+
+               <div class="box-1">
+                  <img src="IMG/1.jpg" height="64px" alt="">
+                  <div class="box-1-content">
+                     <h3>Экономичность</h3>
+                     <p class="gain-center">Oгромный плюс электросамокатов — их экономическая выгодность по сравнению с другими средствами
+                        передвижения.</p>
+                  </div>
+               </div>
+
+               <div class="box-1">
+                  <img src="IMG/2.jpg" alt="">
+                  <div class="box-1-content">
+                     <h3>Зарядка</h3>
+                     <p class="gain-center"> Этот вид транспорта заряжать не только дешево — это еще и очень легко.</p>
+                  </div>
+               </div>
+
+               <div class="box-1">
+                  <img src="IMG/3.jpg" alt="">
+                  <div class="box-1-content">
+                     <h3>Маневренность</h3>
+                     <p class="gain-center">На самокате легко маневрировать по извилистым дорогам и быстро перемещаться из одной точки в другую.</p>
+                  </div>
+               </div>
+
+               <div class="box-1">
+                  <img src="IMG/4.jpg" alt="">
+                  <div class="box-1-content">
+                     <h3>Портативность</h3>
+                     <p class="gain-center">В отличие от мотоциклов или большинства велосипедов (не говоря уже об авто), электросамокаты очень портативны.</p>
+                  </div>
+               </div>
+            </div>
+
+            <a href="#home" class="btn btn-advantages"> Заказать</a>
+
+            <hr>
+
+            <div class="contacts-footer">
+               <h2 class="advantages-h2" id="contact"> Контакты</h2>
+               <div class="contact-content">
+                  <div class="carta" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/959/sevastopol/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Севастополь</a><a href="https://yandex.ru/maps/959/sevastopol/house/prospekt_oktyabrskoy_revolyutsii_42b/Z0oYcgFgTkMFQFpufXl5eXlibQ==/?ll=33.460764%2C44.588520&utm_medium=mapframe&utm_source=maps&z=17.03" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Октябрьской Революции, 42Б — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCURrCC~PC" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                  <div class="contakts">
+                     <div class="contacts-messages">
+                        <div>
+                              <a href="https://yandex.ru/maps/959/sevastopol/house/prospekt_oktyabrskoy_revolyutsii_42b/Z0oYcgFgTkMFQFpufXl5eXlibQ==/?from=mapframe&ll=33.461045%2C44.589918&source=mapframe&utm_source=mapframe&z=15" target="_blank">г.Севастополь, ПОР 42Б</a>
+                        </div>
+                        <div>
+                           <a href="tel:+79780511050">+7 (978) 051-10-50</a>
+                        </div>
+                        <div>
+                           <a href=mailto:info@marketingl.su>info@marketing1.su</a>
+                        </div>
+                     </div>
+
+                     <div class="messages">
+                        <h3>Мессенджеры</h3>
+                        <div class="social-one">
+                           <div class="social whatsapp">
+                              <a href="tel:+79780511050"target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
+                          </div>
+                          <div class="social telegram">
+                              <a href="tel:+79780511050" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+
+
+      <!--Footer-->
+      <footer class="footer">
+
+      </footer>
+
+   </div>
+</body>
+<script src="JS/index.js"></script>
+
+</html>
